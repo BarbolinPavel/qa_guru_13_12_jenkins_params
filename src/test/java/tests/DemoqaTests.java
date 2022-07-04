@@ -9,7 +9,7 @@ import static io.qameta.allure.Allure.step;
 public class DemoqaTests extends TestBase {
 
     @Test
-    @Tag("task")
+    @Tag("test")
     @DisplayName("Successful Tests")
     void successfulTests() {
         String name = "Ivan";
