@@ -21,6 +21,8 @@ public class TestBase {
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
 
+        String selenideUrl = System.getProperty("selenideUrl", "selenoid.autotests.cloud/wd/hub");
+
         Configuration.browserCapabilities = capabilities;
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";

@@ -1,6 +1,7 @@
 package tests;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -8,6 +9,7 @@ import static io.qameta.allure.Allure.step;
 public class DemoqaTests extends TestBase {
 
     @Test
+    @Tag("task")
     @DisplayName("Successful Tests")
     void successfulTests() {
         String name = "Ivan";
@@ -54,6 +56,5 @@ public class DemoqaTests extends TestBase {
                     .checkResult("Address", address)
                     .checkResult("State and City", state + " " + city);
         });
-        System.out.println();
     }
 }
