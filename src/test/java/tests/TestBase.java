@@ -23,7 +23,7 @@ public class TestBase {
 
         String login = config.login();
         String password = config.password();
-        String selenoidUrl = System.getProperty("selenoidUrl");
+        String selenoidUrl = config.selenoidUrl();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
@@ -32,7 +32,7 @@ public class TestBase {
         Configuration.browserCapabilities = capabilities;
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browser = System.getProperty("BrowserName","chrome");
-        Configuration.browserVersion = System.getProperty("Version","100.0.4896.60");
+        Configuration.browserVersion = System.getProperty("Version","100");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.remote = String.format("https://%s:%s@%s", login, password, selenoidUrl);
     }
