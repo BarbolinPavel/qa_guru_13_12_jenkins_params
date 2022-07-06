@@ -31,9 +31,9 @@ public class TestBase {
 
         Configuration.browserCapabilities = capabilities;
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browser = System.getProperty("BrowserName");
-        Configuration.browserVersion = System.getProperty("Version");
-        Configuration.browserSize = System.getProperty("browserSize");
+        Configuration.browser = System.getProperty("browser");
+        Configuration.browserVersion = System.getProperty("version");
+        Configuration.browserSize = System.getProperty("size");
         Configuration.remote = String.format("https://%s:%s@%s", login, password, selenoidUrl);
     }
 
