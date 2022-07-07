@@ -21,10 +21,6 @@ public class TestBase {
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
-        //String login = config.login();
-        //String password = config.password();
-        //String selenoidUrl = config.selenoidUrl();
-
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
@@ -34,7 +30,8 @@ public class TestBase {
         Configuration.browser = System.getProperty("browser","chrome");
         Configuration.browserVersion = System.getProperty("version","99");
         Configuration.browserSize = System.getProperty("size", "1920x1080");
-        Configuration.remote = String.format("https://%s:%s@%s", config.login(), config.password(), config.selenoidUrl());
+        Configuration.remote = String.format("https://%s:%s@%s", config.login(), config.password(),
+                config.selenoidUrl());
     }
 
     @AfterEach
